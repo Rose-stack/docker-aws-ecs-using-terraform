@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Solent</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="assets/logo.jpg" rel="icon">
+    <link  href="assets/logo.jpg" rel="apple-touch-icon">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel='stylesheet' type='text/css' media='screen' href="/css/style.css">
+   
+</head>
+<body>
+
+<div class="container">
+    <div class="speaker-card">
+        <h2><%= model.name %></h2>
+        <h4 class="title">
+            <%= model.title %>
+        </h4>
+        <p class="workplace">
+            <%= model.workplace %>
+        </p>
+        <p  class="about">
+            <%= model.about %>
+        </p>
+
+        <a class="btn  btn-danger edit-1" href="/speakers/edit/<%= model.id %>">Edit</a>
+
+        <div>
+
+
+        </div>
+  
+
+    </div>
+    </div>
+
+    

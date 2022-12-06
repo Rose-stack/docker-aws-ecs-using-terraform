@@ -1,0 +1,422 @@
+
+body, html{
+    margin:0 !important;
+    padding: 0!important;
+    background-color: #e9dcc5;
+}
+.nav{
+    display: flex;
+    width:100%;
+    position:fixed;
+    height: 15vh;
+    top:0;    
+    z-index: 1;
+
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-image: linear-gradient(to right, #cfac0c,#9e7b09);
+}
+ .toggle{
+    display: none;
+}
+.fa-bars{
+    font-size: 28px;
+    color: rgb(248, 247, 247);
+    position: fixed;
+    right: 15px;
+    top:35px;
+    transition: font-size 15ms,color 11ms;
+    transition-timing-function: ease-in;
+}
+.fa-bars:hover{
+font-size:32px;
+color:#f0c28e
+}
+
+
+
+.navbar-left{
+    padding:10px;
+}
+.navbar-left a{
+    text-decoration: none;
+}
+.h2{
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   font-size:30px;
+   color:#ffffff;
+  
+}
+@media screen and (max-height: 600px) {
+    .nav{
+        height: 15vh !important;
+    }
+
+}
+@media screen and (max-width: 700px) {
+    .h2{
+        font-size:20px;
+    }
+}
+
+.navbar-right{
+    padding: 10px;
+    margin-top:23px; 
+    display: block;
+}
+.navbar-items{
+    display:flex;
+    flex-direction: row;
+    list-style: none
+
+}
+.navbar-item{
+    margin-right:8px;
+  height:17px;
+    padding:5px;
+    transition: border-right 10ms, padding 8ms,border-bottom 10ms, background 10ms, border-radius 10ms;
+    transition-timing-function: ease-in;
+ 
+    border-right: rgb(191, 204, 195) solid 1px;
+}
+.navbar-item:hover{
+    border-right: #9c5f1a solid 1px;
+    padding:7px;
+    border-bottom: #9c5f1a solid 1px;
+    background:#d1d152;
+ 
+    border-radius: 4px;
+}
+.navbar-item a{
+    text-decoration: none;
+    color:rgb(255, 255, 255);
+    font-size: 17px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    transition: color 10ms;
+    transition-timing-function: ease-in;
+    font-family: sans-serif;
+
+}
+ .navbar-item a:hover{
+    color:#9c5f1a;
+} 
+/* Styling banner */
+.banner{
+    width: 100%;
+    background-image: url('/assets/banner-3.jpg');
+    height: 88vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 80px;
+    display:flex;
+    flex-direction: row;
+   
+}
+.banner-item{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+}
+.banner-item h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 36px;
+    font-weight: 500;
+    color: #eee;
+    padding: 5px 10px;
+}
+.banner-item p{
+    font-size: 28px;
+    color: rgb(248, 228, 228);
+   padding: 0px 10px;
+   margin: 10px!important;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.detail{
+margin-top: 60px;
+    padding:20px 50px;
+    position: absolute;
+    text-align: center;
+    bottom: 30px;
+    width: 60%;
+    
+}
+
+.banner-detail{
+    color: #ffffff !important;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+    line-height: 2rem;
+    font-size: 15px !important;
+   
+   
+  
+}
+@media screen and (max-width: 700px) {
+    .detail{
+        margin-top: 20px !important;
+        bottom: 40px;
+
+    }
+    .banner-detail{
+     
+    font-size: 15px !important;
+    line-height: 2rem;
+    }
+}
+/* View speakers button */
+.view-speakers{
+    padding:10px 20px;
+    background:#04AA6D;
+    color: rgb(247, 244, 239);
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border:none;
+    cursor: pointer;
+    transition: 10ms;
+}
+.view-speakers:hover{
+    background: transparent;
+    border: solid 1px #04AA6D ;
+}
+
+/* styling speakers table */
+.speakers{
+    width:100%;   
+    padding:10px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    top: 90px;
+}
+.heading{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #085823;
+}
+table {
+    border-collapse: collapse;
+  }
+ h1{
+      font-family: Arial, Helvetica, sans-serif;
+  }
+  th, td {
+    border-bottom: 1px solid #ddd;
+        padding: 15px;
+        text-align: left;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   
+  }
+  tr:hover, tr:nth-child(even):hover{
+    background-color: rgb(243, 243, 243);
+  }
+  tr:nth-child(even){
+      background-color: #dfdfdf;
+  }
+  .btn{
+      padding: 5px 15px;
+      background:#007d8d;
+      border:none;
+      border-radius:5px;
+  
+      transition: 8ms;
+
+  }
+  .btn:hover{
+      padding:8px 17px;
+  }
+  .btn-success{
+      background-color: #90a322;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .btn-warning{
+      background-color: #a85f00;
+  }
+  .btn-warning{
+    background-color: #e72e00;
+    cursor: pointer;
+}
+.btn-tm{
+    background-color: #018854;
+}
+@media screen and (max-width: 700px) {
+    .d-print-none{
+        display: flex;
+        flex-direction: column;
+        padding: 3px;
+        margin-right: 15px;
+    }
+    .btn{
+        margin-bottom: 4px;
+ 
+    }
+}
+  a{
+      text-decoration: none;
+      color:#eee;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+     
+  }
+  /* Styling speaker card */
+  .container{
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+  }
+  .speaker-card{
+      display: flex;
+    
+      position: absolute;
+      top:150px;
+      width: 60%;
+      border: solid 1px rgb(231, 231, 231);
+      border-radius: 5px;
+      background-color: #f1f1f1;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 50px;
+  }
+  .speaker-card h2{
+      align-self: flex-start;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 40px;
+      font-weight: 400;
+  }
+  .about{
+      align-self: flex-start;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 20px 15px;
+      font-size: 17px;
+  }
+  .workplace{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    color:#ddd;
+    background: #181717;
+    padding: 5px;
+
+  }
+  .edit-1{
+      align-self: flex-end;
+  }
+  .title{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 25px;
+    color: #085823;
+  }
+
+
+/* Footer styles */
+.footer{
+    display: flex;
+    width: 100%;
+    height: 7vh;
+    background-image: linear-gradient(to right , #272727, #1a1818);
+    flex-direction: row;
+    justify-content: center;
+   
+    bottom: 0;
+    align-items: center;
+}
+.footer h5{
+    color:#fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+  
+  input[type=text], select, textarea {
+    width: 60%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+  
+  label {
+    padding: 12px ;
+    display: inline-block;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+    right: 10px;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  .form-container {
+    border-radius: 5px;
+  
+    padding: 40px 25px;
+    display: flex;
+    position: absolute;
+    top:100px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+
+  } 
+  form{
+      background-color: #fbffff;
+      width: 60%;
+    padding: 40px 20px;
+      
+
+  }
+  form h1{
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-weight: 500;
+      color: #2e2e2e;
+  }
+  form h1 span{
+      font-size: 20px;
+      color: #085823;
+
+  }
+  .col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+  }
+  
+  .col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+  }

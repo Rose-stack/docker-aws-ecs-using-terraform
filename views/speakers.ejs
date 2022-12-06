@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Solent</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link href="assets/logo.jpg" rel="icon">
+  <link  href="assets/logo.jpg" rel="apple-touch-icon">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel='stylesheet' type='text/css' media='screen' href="/css/style.css">
+ 
+</head>
+
+<div class="speakers">
+    <h1 class="heading">Speakers</h1>
+
+        <table class="table ">
+          <thead>
+            <tr>
+              <th>id</th>
+              <th>Name</th>
+              <th>Title</th>
+              <th>Work Place</th>
+              <th class="">
+                <a class="btn  btn-success" href="/create">Add</a>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <% for (const speaker of model) { %>
+              <tr>
+                <td><%= speaker.id %></td>
+                <td><%= speaker.name %></td>
+                <td><%= speaker.title %></td>
+                <td><%= speaker.workplace %></td>
+                <td class="d-print-none">
+                    <a class="btn  btn-tm" href="/api/speakers/<%= speaker.id %>">View</a>
+                  <a class="btn  btn-danger" href="/speakers/edit/<%= speaker.id %>">Edit</a>
+                  <a class="btn  btn-warning" onclick="  confirm('You are about to delete Speaker <%= speaker.name %> ?') ? document.getElementById('delete-speaker-<%= speaker.id %>').submit() : ''  ">Delete</a>
+                </td>
+                <form action="/delete/<%= speaker.id %>" method="post" id="delete-speaker-<%= speaker.id %>">
+                  
+                    
+                </form>
+              </tr>
+            <% } %>
+          </tbody>
+        </table>
+      </div>
+      </html>

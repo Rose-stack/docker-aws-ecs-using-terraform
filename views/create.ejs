@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Solent</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="assets/logo.jpg" rel="icon">
+    <link  href="assets/logo.jpg" rel="apple-touch-icon">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel='stylesheet' type='text/css' media='screen' href="/css/style.css">
+   
+</head>
+<body>
+  
+<div class="form-container">
+   
+    <form action="/create" method="post">
+        <h1>Add new Speaker</h1>
+    <div class="row">
+      <div class="col-25">
+        <label for="name">Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="name" name="name" placeholder="Enter name...">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="title">Title</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="title" name="title" placeholder="Enter speaker's title...">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="workplace">Work Place</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="workplace" name="workplace" placeholder="Add work place...">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="about">About</label>
+      </div>
+      <div class="col-75">
+        <textarea id="about" name="about" placeholder="Enter details about the speaker" style="height:200px;"> </textarea>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <input type="submit" value="Submit">
+    </div>
+    </form>
+  </div>
